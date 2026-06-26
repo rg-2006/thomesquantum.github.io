@@ -458,67 +458,6 @@
     }
 
     /* ═══════════════════════════════════════════════════════════
-       TIERS
-    ══════════════════════════════════════════════════════════════ */
-    #tiers { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .tiers-header { text-align: center; margin-bottom: 56px; }
-    .tiers-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-    .tier {
-      background: var(--bg);
-      padding: 36px 28px;
-      position: relative;
-      border-top: 2px solid var(--border);
-      transition: border-color 0.2s;
-    }
-    .tier:hover { border-color: var(--teal-dim); }
-    .tier.featured {
-      background: rgba(0,200,150,0.04);
-      border-color: var(--teal);
-    }
-    .tier-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-    .tier-name {
-      font-family: var(--mono);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-    .tier-price {
-      font-family: var(--mono);
-      font-size: 13px;
-      color: var(--amber);
-      margin-bottom: 24px;
-    }
-    .tier-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
-    .tier-features { list-style: none; }
-    .tier-features li {
-      font-size: 13px;
-      color: var(--muted);
-      padding: 6px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .tier-features li:last-child { border-bottom: none; }
-    .tier-features li::before {
-      content: '—';
-      color: var(--teal-dim);
-      font-family: var(--mono);
-      flex-shrink: 0;
-    }
-
-    /* ═══════════════════════════════════════════════════════════
        ABOUT / CREDIBILITY
     ══════════════════════════════════════════════════════════════ */
     #about {}
@@ -641,7 +580,6 @@
       #insight .container,
       #about .container { grid-template-columns: 1fr; gap: 40px; }
       .metrics-grid { grid-template-columns: 1fr; }
-      .tiers-grid { grid-template-columns: 1fr; }
       .readout { flex-direction: column; }
       .readout-item { border-right: none; border-bottom: 1px solid var(--border); }
       .readout-item:last-child { border-bottom: none; }
@@ -675,7 +613,6 @@
       <nav>
         <a href="#problem">Problem</a>
         <a href="#results">Results</a>
-        <a href="#tiers">Tiers</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
@@ -929,70 +866,6 @@
 
   <hr class="rule">
 
-  <!-- ── Tiers ────────────────────────────────────────────────── -->
-  <section id="tiers">
-    <div class="container">
-      <div class="tiers-header fade-in">
-        <div class="eyebrow">Service Model</div>
-        <h2>Three delivery tiers</h2>
-      </div>
-
-      <div class="tiers-grid fade-in">
-        <div class="tier">
-          <div class="tier-num">TIER 01</div>
-          <div class="tier-name">REST API</div>
-          <div class="tier-price">$500 – $2,500 / month</div>
-          <div class="tier-desc">
-            Unary request/response for occasional entropy needs.
-            Easy integration for developers and SMBs.
-          </div>
-          <ul class="tier-features">
-            <li>Standard REST endpoint</li>
-            <li>Per-block health metadata</li>
-            <li>Ed25519 attestation</li>
-            <li>JSON or binary response</li>
-          </ul>
-        </div>
-
-        <div class="tier featured">
-          <div class="tier-num">TIER 02</div>
-          <div class="tier-name">gRPC Streaming</div>
-          <div class="tier-price">$8,000 – $50,000 / month</div>
-          <div class="tier-desc">
-            Persistent server-push stream into client-resident buffer.
-            Sub-microsecond application access. No per-call network overhead.
-          </div>
-          <ul class="tier-features">
-            <li>Persistent streaming connection</li>
-            <li>Local buffer, memory-speed reads</li>
-            <li>Per-customer channel isolation</li>
-            <li>Real-time H_min dashboard</li>
-            <li>Up to 60 concurrent channels / node</li>
-          </ul>
-        </div>
-
-        <div class="tier">
-          <div class="tier-num">TIER 03</div>
-          <div class="tier-name">Sovereign / On-Prem</div>
-          <div class="tier-price">$500K – $5M / year</div>
-          <div class="tier-desc">
-            Air-gapped, pre-mission buffer loading for denied environments.
-            Defense, classified, and forward operating base deployments.
-          </div>
-          <ul class="tier-features">
-            <li>Fully offline operation</li>
-            <li>Pre-mission buffer pre-load</li>
-            <li>Encrypted buffer at rest</li>
-            <li>Domestic supply chain</li>
-            <li>ATAK plugin integration</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule">
-
   <!-- ── About ────────────────────────────────────────────────── -->
   <section id="about">
     <div class="container">
@@ -1063,8 +936,8 @@
       <div class="eyebrow" style="justify-content:center;display:flex;">Contact</div>
       <h2>Interested in a pilot or partnership?</h2>
       <p>
-        Reach out to discuss Tier 2 enterprise streaming pilots,
-        Tier 3 sovereign deployments, research collaborations,
+        Reach out to discuss enterprise deployments, sovereign
+        and defense applications, research collaborations,
         or investment inquiries.
       </p>
       <div class="contact-card">
